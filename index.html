@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Currency Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+    <script src="app/sw.js"></script>
+    <script src="app/app.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header class="text-left font-weight-bold pl-5">
+        <p class="headertext text-secondary text-bold">Currency Converter</p>
+    </header>
+    <div class="cont text-center text-secondary">
+        <h1>The one Place to Convert Your currency</h1>
+        <p class="lead">Convert from one currency to another</p>
+    </div>
+    <div class="wrap">
+        <span class="try text-secondary">Try it:</span>
+        <div class="container ">
+            <input class="form-control form-control-sm amount font-weight-bold" id="amount" placeholder="Enter amount" type="text" required>
+            <select class="form-control form-control-sm" name="fromCurrency" id="fromCurrency" required>
+
+            </select>
+            <input class="form-control form-control-sm text-center font-weight-bold" id="to" placeholder="to" readonly type="text">
+            <select class="form-control form-control-sm" name="toCurrency" id="toCurrency" required>
+
+            </select>
+            <button id="btnconvert" class="btn btn-primary btn-sm font-weight-bold" onclick="getData()">Convert</button>
+            <input class="form-control form-control-sm font-weight-bold" id="process" readonly placeholder="Press Convert button" type="text">
+        </div>
+    </div>
+
+    <p class="footertext text-center mt-5 text-secondary "> &copy copyrights zack
+        <P id="foot"></P>
+    </p>
+
+
+    <script>
+
+
+          
+        
+
+    </script>
+</body>
+
+</html>
