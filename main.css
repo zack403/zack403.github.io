@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+body{
+
+}
+.headertext{
+    padding-top: 30px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif
+
+}
+.footertext{
+    padding-top: 30px;
+}
+footer{
+    background-color: aqua;
+
+}
+/* .wrapper{
+    min-height : calc(100vh - 54px);
+
+} */
+header{
+    background-color: aqua;
+    height: 100px;
+
+    
+}
+#btnconvert{
+    margin-left: 5%;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 10px;
+}
+#process{
+    margin-left: 5%;
+}
+@media only screen and (min-width: 801px) {
+.container{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 0px;
+}
+
+.wrap{
+    margin-top: 100px;
+    
+}
+/* ::placeholder {
+    color: red;
+} */
+.cont{
+    margin-top: 10%;
+    font-family: Arial, Helvetica, sans-serif
+}
+#fromCurrency{
+    width: 200%;
+}
+#toCurrency{
+    width: 200%;
+}
+.try{
+    margin-left: 10%;
+}
+input[type="text"]{
+  width: 200%;
+}
+}
+@media only screen and (max-width: 768px){
+    .try{
+        margin-left:10%;
+    }
+}
+@media only screen and (max-width: 1200px){
+body{
+    font-size: 50px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+#toCurrency, #to, #fromCurrency, #fromCurrency, #amount{
+    margin-top:5%;
+}
+#btnconvert{
+    margin-left : 0;
+    margin-top:5%;
+    margin-bottom: 5%;
+    width: 100%;
+}
+#process{
+    margin-left: 0;
+}
+.try{
+    margin-left: 10%;
+}
+.wrapper{
+    margin-top: 30%;
+
+}
+
+}
