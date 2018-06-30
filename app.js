@@ -53,7 +53,7 @@ const convertCurrency = (amount, fromCurrency, toCurrency, cb) => {
     validate = document.getElementById('amount').value;
     if (isNaN(validate) || validate === "") {
         document.getElementById("amount").style.border = "1px solid red";
-        document.getElementById("amount").value = "Enter amount";
+        
     }
     else {
         let convert = "converting..."
