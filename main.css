@@ -11,7 +11,7 @@ body{
 
 }
 .footertext{
-    padding-top: 30px;
+    padding-top: 8%;
 }
 footer{
     background-color: aqua;
@@ -82,6 +82,9 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
 
+}
+.footertext{
+    padding-top: 1%;
 }
 #toCurrency, #to, #fromCurrency, #fromCurrency, #amount{
     margin-top:5%;
