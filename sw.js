@@ -21,9 +21,7 @@ if ('serviceWorker' in navigator) {
                 '/app.js',
                 '/favicon.ico',
                 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css',
-                'https://free.currencyconverterapi.com/api/v5/currencies',
-                'https://free.currencyconverterapi.com/api/v5/convert?q='
-            + query + '&compact=ultra'
+                'https://free.currencyconverterapi.com/api/v5/currencies'
             ]);
         })
     );
