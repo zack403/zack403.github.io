@@ -15,10 +15,10 @@ self.addEventListener('install', event => {
             return cache.addAll([
                 '/',
                 '/index.html',
-                '/styles/main.css',
-                '/app/sw.js',
-                '/app/app.js',
-                '/images/favicon.ico',
+                '/main.css',
+                '/sw.js',
+                '/app.js',
+                '/favicon.ico',
                 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css',
                 'https://free.currencyconverterapi.com/api/v5/currencies'
             ]);
