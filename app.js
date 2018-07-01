@@ -46,11 +46,50 @@ const getData = () => {
         console.log("Result is " + amount);
     });
     document.getElementById('amount').value = '';
- 
-
-
 };
 
+
+const convertCurrency = (amount, fromCurrency, toCurrency, cb) => {
+    let validate;
+    validate = document.getElementById('amount').value;
+    if (isNaN(validate) || validate === "") {
+        document.getElementById("amount").style.border = "1px solid red";
+        document.getElementById("amount").value = "Enter amount";
+
+    }
+    else {
+        let convert = "converting..."
+        document.getElementById('process').value = convert;
+        fromCurrency = encodeURIComponent(fromCurrency);
+        toCurrency = encodeURIComponent(toCurrency);
+        const query = fromCurrency + '_' + toCurrency;
+        const url = 'https://free.currencyconverterapi.com/api/v5/convert?q='
+            + query + '&compact=ultra';
+        fetch(url).then((response) => {
+            return response.json();
+        })
+            .then((body) => {
+                try {
+                    let jsonObj = body;
+
+                    let val = jsonObj[query];
+                    if (val) {
+                        var total = val * amount;
+                        cb(null, Math.round(total * 100) / 100);
+                    } else {
+                        var err = new Error("Value not found for " + query);
+                        console.log(err);
+                        cb(err);
+                    }
+                } catch (e) {
+                    console.log("Parse error: ", e);
+                    cb(e);
+                }
+                console.log(body)
+            })
+
+    }
+}
 
 
 
