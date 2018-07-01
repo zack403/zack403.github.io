@@ -2,7 +2,7 @@ let staticCacheName = 'currency-converter';
 
 //Register Service  Worker
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('app/sw.js').then(( reg)=> console.log("service worker successfully registered!", reg)
+    navigator.serviceWorker.register('sw.js').then( reg => console.log("service worker successfully registered!", reg)
     ).catch( err => console.log('Error while trying to register service worker', err)
     );
 }
