@@ -2,7 +2,7 @@ let staticCacheName = 'currency-converter';
 
 //Register Service  Worker
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('app/sw.js').then(( eg)=> console.log("service worker successfully registered!", reg)
+    navigator.serviceWorker.register('app/sw.js').then(( reg)=> console.log("service worker successfully registered!", reg)
     ).catch( err => console.log('Error while trying to register service worker', err)
     );
 }
@@ -61,7 +61,7 @@ open.onsuccess = () => {
     let db = open.result;
     let tx = db.transaction("CurrencyConverter", "readwrite");
     let store = tx.objectStore("CurrencyConverter");
-    let index = store.index("CurrencyName");
+    let index = store.index("CurrencyNameIndex");
 
     // Add some data
     store.put({ id: "ALL", Currency: { CurrencyName: "Albanian Lek", CurrencySymbol: "ALL" } });
