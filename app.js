@@ -2,11 +2,16 @@ const populateCurrency = () => {
     const url = 'https://free.currencyconverterapi.com/api/v5/currencies';
     fetch(url).then((response) => response.json()
     )
-    .then((body) => {
-        //let sortCurrency = [];
-        for (var data in body.results) {
-            //sortCurrency.push([data, body.results[data]]);
+    .then( body => {
+        let sortCurrency = [];
+        for (const data in body.results) {
+            //sortCurrency.push(data);
+           // let sortedArray = sortCurrency.sort();
             console.log(data);
+            // for (let i = 0; i < sortedArray.length; i++) {
+            //     const element = sortedArray[i];
+                
+            // }
             let fromCurrency = document.getElementById("fromCurrency");
             let toCurrency = document.getElementById("toCurrency");
             let toOption = document.createElement("OPTION");
@@ -21,10 +26,6 @@ const populateCurrency = () => {
             fromCurrency.add(fromOption);
             toCurrency.add(toOption);
         }
-        // sortCurrency.sort((a, b) => {
-        //     return a[data] - b[data];
-
-        // });
         console.log(body);
     })
 
