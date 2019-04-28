@@ -1,5 +1,5 @@
 const populateCurrency = () => {
-    const url = 'https://free.currencyconverterapi.com/api/v5/currencies';
+    const url = '/currency.json';
     fetch(url).then((response) => response.json()
     )
     .then( body => {
