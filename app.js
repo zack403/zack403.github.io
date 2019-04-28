@@ -86,7 +86,9 @@ const convertCurrency = (amount, fromCurrency, toCurrency, cb) => {
                     cb(e);
                 }
                 console.log(body)
-            })
+            }).catch(err => {
+        document.getElementById("process").value = "Could not convert";
+      })
 
     }
 }
